@@ -1,0 +1,5047 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "[PAD]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "[UNK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "[BOS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "[EOS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Sequence",
+    "pretokenizers": [
+      {
+        "type": "Split",
+        "pattern": {
+          "String": "\\\\[a-zA-Z]+\\*?|\\\\[^a-zA-Z\\s]"
+        },
+        "behavior": "Isolated",
+        "invert": false
+      },
+      {
+        "type": "WhitespaceSplit"
+      }
+    ]
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": "[UNK]",
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "[PAD]": 0,
+      "[UNK]": 1,
+      "[BOS]": 2,
+      "[EOS]": 3,
+      "!": 4,
+      "\"": 5,
+      "#": 6,
+      "&": 7,
+      "'": 8,
+      "(": 9,
+      ")": 10,
+      "*": 11,
+      "+": 12,
+      ",": 13,
+      "-": 14,
+      ".": 15,
+      "/": 16,
+      "0": 17,
+      "1": 18,
+      "2": 19,
+      "3": 20,
+      "4": 21,
+      "5": 22,
+      "6": 23,
+      "7": 24,
+      "8": 25,
+      "9": 26,
+      ":": 27,
+      ";": 28,
+      "<": 29,
+      "=": 30,
+      ">": 31,
+      "?": 32,
+      "@": 33,
+      "A": 34,
+      "B": 35,
+      "C": 36,
+      "D": 37,
+      "E": 38,
+      "F": 39,
+      "G": 40,
+      "H": 41,
+      "I": 42,
+      "J": 43,
+      "K": 44,
+      "L": 45,
+      "M": 46,
+      "N": 47,
+      "O": 48,
+      "P": 49,
+      "Q": 50,
+      "R": 51,
+      "S": 52,
+      "T": 53,
+      "U": 54,
+      "V": 55,
+      "W": 56,
+      "X": 57,
+      "Y": 58,
+      "Z": 59,
+      "[": 60,
+      "\\": 61,
+      "]": 62,
+      "^": 63,
+      "_": 64,
+      "`": 65,
+      "a": 66,
+      "b": 67,
+      "c": 68,
+      "d": 69,
+      "e": 70,
+      "f": 71,
+      "g": 72,
+      "h": 73,
+      "i": 74,
+      "j": 75,
+      "k": 76,
+      "l": 77,
+      "m": 78,
+      "n": 79,
+      "o": 80,
+      "p": 81,
+      "q": 82,
+      "r": 83,
+      "s": 84,
+      "t": 85,
+      "u": 86,
+      "v": 87,
+      "w": 88,
+      "x": 89,
+      "y": 90,
+      "z": 91,
+      "{": 92,
+      "|": 93,
+      "}": 94,
+      "~": 95,
+      "\\p": 96,
+      "ra": 97,
+      "rac": 98,
+      "\\f": 99,
+      "\\frac": 100,
+      "ta": 101,
+      "al": 102,
+      "\\l": 103,
+      "ar": 104,
+      "\\m": 105,
+      "ri": 106,
+      "\\b": 107,
+      "si": 108,
+      "ti": 109,
+      "ft": 110,
+      "eta": 111,
+      "am": 112,
+      "\\mu": 113,
+      "ha": 114,
+      "gh": 115,
+      "righ": 116,
+      "me": 117,
+      "\\righ": 118,
+      "hi": 119,
+      "ma": 120,
+      "\\le": 121,
+      "th": 122,
+      "\\left": 123,
+      "in": 124,
+      "\\right": 125,
+      "de": 126,
+      "\\c": 127,
+      "\\par": 128,
+      "tial": 129,
+      "\\partial": 130,
+      "pha": 131,
+      "\\al": 132,
+      "\\alpha": 133,
+      "\\s": 134,
+      "da": 135,
+      "\\n": 136,
+      "\\e": 137,
+      "\\in": 138,
+      "\\right)": 139,
+      "\\left(": 140,
+      "lta": 141,
+      "bda": 142,
+      "ambda": 143,
+      "\\ma": 144,
+      "\\math": 145,
+      "\\pri": 146,
+      "\\prime": 147,
+      "\\nu": 148,
+      "\\v": 149,
+      "\\pi": 150,
+      "amma": 151,
+      "\\si": 152,
+      "ot": 153,
+      "\\phi": 154,
+      "dot": 155,
+      "rm": 156,
+      "\\de": 157,
+      "\\mathrm": 158,
+      "qu": 159,
+      "\\cal": 160,
+      "\\o": 161,
+      "\\delta": 162,
+      "gma": 163,
+      "\\lambda": 164,
+      "\\beta": 165,
+      "\\bar": 166,
+      "\\int": 167,
+      "\\P": 168,
+      "ga": 169,
+      "mega": 170,
+      "on": 171,
+      "theta": 172,
+      "le": 173,
+      "\\g": 174,
+      "rt": 175,
+      "\\sigma": 176,
+      "\\\\": 177,
+      "\\theta": 178,
+      "ad": 179,
+      "quad": 180,
+      "lde": 181,
+      "tilde": 182,
+      "lon": 183,
+      "psi": 184,
+      "psilon": 185,
+      "hat": 186,
+      "\\gamma": 187,
+      "\\psi": 188,
+      "\\su": 189,
+      "\\hat": 190,
+      "\\sq": 191,
+      "\\sqrt": 192,
+      "ho": 193,
+      "rho": 194,
+      "\\sum": 195,
+      "gle": 196,
+      "ngle": 197,
+      "\\rho": 198,
+      "\\tilde": 199,
+      "\\ta": 200,
+      "\\var": 201,
+      "\\tau": 202,
+      "\\ve": 203,
+      "ray": 204,
+      "array": 205,
+      "{array": 206,
+      "{array}": 207,
+      "\\omega": 208,
+      "\\epsilon": 209,
+      "ro": 210,
+      "er": 211,
+      "\\bf": 212,
+      "\\eta": 213,
+      "xi": 214,
+      "\\xi": 215,
+      "\\Phi": 216,
+      "\\quad": 217,
+      "\\vec": 218,
+      "ig": 219,
+      "\\dot": 220,
+      "\\cdot": 221,
+      "Gamma": 222,
+      "\\Gamma": 223,
+      "\\{": 224,
+      "fty": 225,
+      "\\infty": 226,
+      "\\L": 227,
+      "\\ra": 228,
+      "\\right]": 229,
+      "\\left[": 230,
+      "\\rangle": 231,
+      "\\}": 232,
+      "\\pm": 233,
+      "\\Lambda": 234,
+      "ap": 235,
+      "tar": 236,
+      "\\varp": 237,
+      "app": 238,
+      "\\varphi": 239,
+      "\\D": 240,
+      "elta": 241,
+      "\\Delta": 242,
+      "\\en": 243,
+      "eg": 244,
+      "\\beg": 245,
+      "\\begin": 246,
+      "\\end": 247,
+      "\\O": 248,
+      "row": 249,
+      "\\chi": 250,
+      "\\Omega": 251,
+      "ine": 252,
+      "line": 253,
+      "tarrow": 254,
+      "\\w": 255,
+      "\\k": 256,
+      "appa": 257,
+      "\\kappa": 258,
+      "\\q": 259,
+      "\\qquad": 260,
+      "\\begin{array}": 261,
+      "\\end{array}": 262,
+      "angle": 263,
+      "\\Psi": 264,
+      "iv": 265,
+      "\\equ": 266,
+      "\\equiv": 267,
+      "la": 268,
+      "\\langle": 269,
+      "dag": 270,
+      "\\dag": 271,
+      "\\big": 272,
+      "ver": 273,
+      "\\over": 274,
+      "time": 275,
+      "times": 276,
+      "\\overline": 277,
+      "\\!": 278,
+      "Big": 279,
+      "\\Big": 280,
+      "\\rightarrow": 281,
+      "ger": 282,
+      "\\dagger": 283,
+      "st": 284,
+      "\\sin": 285,
+      "\\z": 286,
+      "\\zeta": 287,
+      "epsilon": 288,
+      "\\varepsilon": 289,
+      "ab": 290,
+      "\\nab": 291,
+      "\\nabla": 292,
+      "\\co": 293,
+      "xp": 294,
+      "\\exp": 295,
+      "\\t": 296,
+      "\\cos": 297,
+      "\\S": 298,
+      "dots": 299,
+      "ide": 300,
+      "\\wide": 301,
+      "igma": 302,
+      "\\Sigma": 303,
+      "ll": 304,
+      "\\cdots": 305,
+      "\\ln": 306,
+      "\\mathc": 307,
+      "\\mathcal": 308,
+      "\\ldots": 309,
+      "\\left\\{": 310,
+      "\\ell": 311,
+      "\\:": 312,
+      "\\pro": 313,
+      "ge": 314,
+      "\\h": 315,
+      "\\otimes": 316,
+      "ed": 317,
+      "edge": 318,
+      "\\sim": 319,
+      "\\wedge": 320,
+      "\\Pi": 321,
+      "tri": 322,
+      "\\prod": 323,
+      "bar": 324,
+      "\\hbar": 325,
+      "\\d": 326,
+      "x}": 327,
+      "{ma": 328,
+      "trix}": 329,
+      "{matrix}": 330,
+      "yle": 331,
+      "style": 332,
+      "\\vert": 333,
+      "\\widetilde": 334,
+      "\\right\\}": 335,
+      "\\bigg": 336,
+      "\\to": 337,
+      "\\u": 338,
+      "\\mi": 339,
+      "Th": 340,
+      "\\Th": 341,
+      "\\Theta": 342,
+      "\\times": 343,
+      "\\mid": 344,
+      "eq": 345,
+      "\\a": 346,
+      "ck": 347,
+      "\\un": 348,
+      "\\right|": 349,
+      "bf": 350,
+      "der": 351,
+      "\\under": 352,
+      "\\mathbf": 353,
+      "re": 354,
+      "\\underline": 355,
+      "pt": 356,
+      "rightarrow": 357,
+      "sp": 358,
+      "\\ast": 359,
+      "\\dots": 360,
+      "\\left|": 361,
+      "\\leq": 362,
+      "\\app": 363,
+      "rox": 364,
+      "\\approx": 365,
+      "\\star": 366,
+      "\\lo": 367,
+      "\\log": 368,
+      "rel": 369,
+      "\\widehat": 370,
+      "\\di": 371,
+      "tack": 372,
+      "\\stack": 373,
+      "\\stackrel": 374,
+      "\\sinh": 375,
+      "im": 376,
+      "\\lim": 377,
+      "\\right.": 378,
+      "ystyle": 379,
+      "laystyle": 380,
+      "splaystyle": 381,
+      "\\displaystyle": 382,
+      "\\begin{matrix}": 383,
+      "\\end{matrix}": 384,
+      "\\per": 385,
+      "\\perp": 386,
+      "\\cosh": 387,
+      "math": 388,
+      "\\det": 389,
+      "cri": 390,
+      "cript": 391,
+      "ong": 392,
+      "ex": 393,
+      "\\tex": 394,
+      "\\text": 395,
+      "\\left.": 396,
+      "\\i": 397,
+      "\\geq": 398,
+      "\\mp": 399,
+      "meq": 400,
+      "\\simeq": 401,
+      "\\Bigr": 402,
+      "\\vartheta": 403,
+      "ongrightarrow": 404,
+      "\\right\\rangle": 405,
+      "rc": 406,
+      "\\ci": 407,
+      "\\Bigl": 408,
+      "\\circ": 409,
+      "\\neq": 410,
+      "us": 411,
+      "brac": 412,
+      "se": 413,
+      "\\longrightarrow": 414,
+      "int": 415,
+      "lus": 416,
+      "plus": 417,
+      "\\oint": 418,
+      "\\script": 419,
+      "\\biggl": 420,
+      "\\biggr": 421,
+      "\\tan": 422,
+      "\\textstyle": 423,
+      "\\,": 424,
+      "\\Bigg": 425,
+      "\\not": 426,
+      "\\left\\langle": 427,
+      "\\bigr": 428,
+      "\\ddot": 429,
+      "\\bigl": 430,
+      "ld": 431,
+      "\\oplus": 432,
+      "old": 433,
+      "oldmath": 434,
+      "Xi": 435,
+      "\\Xi": 436,
+      "\\boldmath": 437,
+      "onu": 438,
+      "set": 439,
+      "om": 440,
+      "brack": 441,
+      "\\|": 442,
+      "lle": 443,
+      "\\propt": 444,
+      "\\propto": 445,
+      "riangle": 446,
+      "\\triangle": 447,
+      "mb": 448,
+      "eck": 449,
+      "heck": 450,
+      "\\check": 451,
+      "\\nonu": 452,
+      "mber": 453,
+      "\\nonumber": 454,
+      "\\fo": 455,
+      "ce": 456,
+      "ace": 457,
+      "\\R": 458,
+      "\\varrho": 459,
+      "\\ge": 460,
+      "space": 461,
+      "--": 462,
+      "\\imath": 463,
+      "rall": 464,
+      "\\forall": 465,
+      "\\right>": 466,
+      "script": 467,
+      "\\scriptscript": 468,
+      "\\scriptscriptstyle": 469,
+      "\\sp": 470,
+      "\\lbrack": 471,
+      "brace": 472,
+      "ze": 473,
+      "size": 474,
+      "pst": 475,
+      "\\tanh": 476,
+      "psto": 477,
+      "\\r": 478,
+      "bset": 479,
+      "\\subset": 480,
+      "arrow": 481,
+      "up": 482,
+      "\\bot": 483,
+      "\\it": 484,
+      "\\mapsto": 485,
+      "ara": 486,
+      "\\para": 487,
+      "llel": 488,
+      "\\parallel": 489,
+      "igh": 490,
+      "\\leftrightarrow": 491,
+      "\\Righ": 492,
+      "\\Rightarrow": 493,
+      "ota": 494,
+      "\\iota": 495,
+      "\\textrm": 496,
+      "nt": 497,
+      "\\ll": 498,
+      "\\scriptsize": 499,
+      "ntom": 500,
+      "\\left<": 501,
+      "\\j": 502,
+      "\\bin": 503,
+      "\\binom": 504,
+      "\\bigo": 505,
+      "\\bu": 506,
+      "\\overrightarrow": 507,
+      "\\hspace": 508,
+      "\\jmath": 509,
+      "ftrightarrow": 510,
+      "ase": 511,
+      "case": 512,
+      "op": 513,
+      "s}": 514,
+      "{case": 515,
+      "{cases}": 516,
+      "\\ar": 517,
+      "\\ne": 518,
+      "ut": 519,
+      "tin": 520,
+      "\\pha": 521,
+      "\\phantom": 522,
+      "\\tin": 523,
+      "\\cong": 524,
+      "\\sf": 525,
+      "\\tiny": 526,
+      "sh": 527,
+      "\\Biggr": 528,
+      "\\gg": 529,
+      "\\Biggl": 530,
+      "\\sm": 531,
+      "Upsilon": 532,
+      "\\Upsilon": 533,
+      "all": 534,
+      "\\small": 535,
+      "ow": 536,
+      "own": 537,
+      "ve": 538,
+      "llet": 539,
+      "\\bullet": 540,
+      "\\vee": 541,
+      "lash": 542,
+      "\\bre": 543,
+      "\\bigoplus": 544,
+      "\\breve": 545,
+      "ote": 546,
+      "\\wp": 547,
+      "\\arc": 548,
+      "bo": 549,
+      "\\scriptstyle": 550,
+      "ownarrow": 551,
+      "box": 552,
+      "top": 553,
+      "ongle": 554,
+      "\\atop": 555,
+      "\\cot": 556,
+      "\\downarrow": 557,
+      "\\sup": 558,
+      "\\varpi": 559,
+      "\\coth": 560,
+      "\\rbrack": 561,
+      "\\ker": 562,
+      "ftarrow": 563,
+      "\\#": 564,
+      "ongleftrightarrow": 565,
+      "ct": 566,
+      "\\sb": 567,
+      "\\vdots": 568,
+      "parrow": 569,
+      "arge": 570,
+      "\\uparrow": 571,
+      "\\supset": 572,
+      "\\cap": 573,
+      "Im": 574,
+      "\\Im": 575,
+      "\\cup": 576,
+      "\\kern": 577,
+      "arp": 578,
+      "tan": 579,
+      "\\slash": 580,
+      "\\arctan": 581,
+      "\\upsilon": 582,
+      "\\Re": 583,
+      "\\Longrightarrow": 584,
+      "\\mit": 585,
+      "\\begin{cases}": 586,
+      "\\end{cases}": 587,
+      "\\underbrace": 588,
+      "cut": 589,
+      "\\ddots": 590,
+      "\\acut": 591,
+      "\\acute": 592,
+      "ise": 593,
+      "\\lbrace": 594,
+      "\\raise": 595,
+      "\\rbrace": 596,
+      "rote": 597,
+      "\\prote": 598,
+      "\\bigtri": 599,
+      "\\protect": 600,
+      "\\bigtriangle": 601,
+      "\\hline": 602,
+      "\\min": 603,
+      "sigma": 604,
+      "\\varsigma": 605,
+      "sf": 606,
+      "\\dim": 607,
+      "or": 608,
+      "lo": 609,
+      "flo": 610,
+      "floor": 611,
+      "\\mathsf": 612,
+      "eftrightarrow": 613,
+      "\\longleftrightarrow": 614,
+      "\\se": 615,
+      "\\Leftrightarrow": 616,
+      "arpo": 617,
+      "\\bigtriangleup": 618,
+      "ip": 619,
+      "kip": 620,
+      "skip": 621,
+      "\\Large": 622,
+      "fi": 623,
+      "\\righth": 624,
+      "\\vspace": 625,
+      "onup": 626,
+      "arpoonup": 627,
+      "\\rightharpoonup": 628,
+      "note": 629,
+      "\\leftarrow": 630,
+      "otnote": 631,
+      "\\hfi": 632,
+      "\\footnote": 633,
+      "Ve": 634,
+      "\\Ve": 635,
+      "gth": 636,
+      "ngth": 637,
+      "tle": 638,
+      "\\footnotesize": 639,
+      "\\Vert": 640,
+      "tlength": 641,
+      "ke": 642,
+      "\\Longleftrightarrow": 643,
+      "\\enspace": 644,
+      "\\re": 645,
+      "\\large": 646,
+      "\\right\\vert": 647,
+      "\\left\\vert": 648,
+      "\\em": 649,
+      "\\make": 650,
+      "\\deg": 651,
+      "\\cdotp": 652,
+      "\\bigc": 653,
+      "\\textbf": 654,
+      "\\hfill": 655,
+      "\\makebox": 656,
+      "nd": 657,
+      "\\put": 658,
+      "phantom": 659,
+      "\\doteq": 660,
+      "\\bigotimes": 661,
+      "\\raisebox": 662,
+      "yset": 663,
+      "\\max": 664,
+      "\\tt": 665,
+      "ptyset": 666,
+      "\\emptyset": 667,
+      "slash": 668,
+      "\\mathop": 669,
+      "\\vphantom": 670,
+      "\\rfloor": 671,
+      "\\left\\|": 672,
+      "\\right\\|": 673,
+      "\\sl": 674,
+      "leftarrow": 675,
+      "\\overleftarrow": 676,
+      "\\no": 677,
+      "\\llap": 678,
+      "ack": 679,
+      "harp": 680,
+      "ure": 681,
+      "\\back": 682,
+      "amon": 683,
+      "\\sharp": 684,
+      "\\diamon": 685,
+      "\\arg": 686,
+      "\\backslash": 687,
+      "\\diamond": 688,
+      "\\thi": 689,
+      "ild": 690,
+      "min": 691,
+      "\\build": 692,
+      "\\ref": 693,
+      "minus": 694,
+      "\\buildrel": 695,
+      "\\fla": 696,
+      "\\flat": 697,
+      "ict": 698,
+      "pict": 699,
+      "{pict": 700,
+      "\\odot": 701,
+      "\\textup": 702,
+      "ure}": 703,
+      "{picture}": 704,
+      "rut": 705,
+      "\\mat": 706,
+      "\\/": 707,
+      "el": 708,
+      "ou": 709,
+      "trut": 710,
+      "\\lab": 711,
+      "hit": 712,
+      "\\strut": 713,
+      "\\bigcup": 714,
+      "\\mathit": 715,
+      "\\label": 716,
+      "nspace": 717,
+      "alig": 718,
+      "\\lon": 719,
+      "gmapsto": 720,
+      "\\overbrace": 721,
+      "\\thinspace": 722,
+      "align": 723,
+      "\\longmapsto": 724,
+      "itlength": 725,
+      "od": 726,
+      "\\unitlength": 727,
+      "\\pou": 728,
+      "\\colon": 729,
+      "\\subseteq": 730,
+      "\\setlength": 731,
+      "nds": 732,
+      "\\pounds": 733,
+      "\\fbox": 734,
+      "\\ni": 735,
+      "\\noalign": 736,
+      "\\ominus": 737,
+      "\\enskip": 738,
+      "\\_": 739,
+      "wedge": 740,
+      "\\line": 741,
+      "\\lfloor": 742,
+      "\\bigwedge": 743,
+      "co": 744,
+      "ep": 745,
+      "\\alep": 746,
+      "\\aleph": 747,
+      "\\circle": 748,
+      "down": 749,
+      "sin": 750,
+      "\\vline": 751,
+      "rmal": 752,
+      "\\begin{picture}": 753,
+      "\\end{picture}": 754,
+      "\\arcco": 755,
+      "\\arcsin": 756,
+      "ongleftarrow": 757,
+      "\\bigtriangledown": 758,
+      "\\set": 759,
+      "\\bigcap": 760,
+      "\\arccos": 761,
+      "\\ho": 762,
+      "and": 763,
+      "it": 764,
+      "krightarrow": 765,
+      "lap": 766,
+      "mod": 767,
+      "okrightarrow": 768,
+      "\\land": 769,
+      "\\bmod": 770,
+      "\\left\\lbrack": 771,
+      "\\right\\rbrack": 772,
+      "\\ddag": 773,
+      "\\space": 774,
+      "\\rlap": 775,
+      "\\smallskip": 776,
+      "\\sec": 777,
+      "\\hookrightarrow": 778,
+      "at": 779,
+      "su": 780,
+      "ura": 781,
+      "\\nat": 782,
+      "\\diamondsu": 783,
+      "ural": 784,
+      "\\natural": 785,
+      "\\diamondsuit": 786,
+      "\\pmod": 787,
+      "\\setminus": 788,
+      "\\ddagger": 789,
+      "\\&": 790,
+      "\\-": 791,
+      "\\longleftarrow": 792,
+      "tit": 793,
+      "\\right\\rfloor": 794,
+      "\\sqc": 795,
+      "\\textit": 796,
+      "rame": 797,
+      "\\frame": 798,
+      "\\left\\lbrace": 799,
+      "\\right\\rbrace": 800,
+      "dash": 801,
+      "\\vskip": 802,
+      "\\vdash": 803,
+      "lax": 804,
+      "\\bigm": 805,
+      "\\relax": 806,
+      "\\normal": 807,
+      "\\framebox": 808,
+      "\\normalsize": 809,
+      "il": 810,
+      "sc": 811,
+      "wer": 812,
+      "\\csc": 813,
+      "\\sc": 814,
+      "lines": 815,
+      "\\top": 816,
+      "cklines": 817,
+      "\\lower": 818,
+      "\\hfil": 819,
+      "\\thicklines": 820,
+      "ci": 821,
+      "eci": 822,
+      "ker": 823,
+      "no": 824,
+      "pe": 825,
+      "rd": 826,
+      "ss": 827,
+      "sha": 828,
+      "\\pre": 829,
+      "\\lce": 830,
+      "\\med": 831,
+      "\\mker": 832,
+      "mash": 833,
+      "\\smash": 834,
+      "\\exi": 835,
+      "\\null": 836,
+      "\\surd": 837,
+      "sts": 838,
+      "\\textsf": 839,
+      "\\textno": 840,
+      "\\Biggm": 841,
+      "\\speci": 842,
+      "\\itsha": 843,
+      "\\supseteq": 844,
+      "\\sqcup": 845,
+      "\\prec": 846,
+      "\\lceil": 847,
+      "\\medskip": 848,
+      "\\mkern": 849,
+      "\\exists": 850,
+      "\\textnormal": 851,
+      "\\special": 852,
+      "\\itshape": 853,
+      "AR": 854,
+      "GE": 855,
+      "\\am": 856,
+      "\\array": 857,
+      "boldmath": 858,
+      "cc": 859,
+      "gro": 860,
+      "sure": 861,
+      "te": 862,
+      "alg": 863,
+      "right": 864,
+      "\\lefteq": 865,
+      "\\ss": 866,
+      "\\inf": 867,
+      "left": 868,
+      "\\succ": 869,
+      "\\Longleftarrow": 870,
+      "\\LAR": 871,
+      "\\ensure": 872,
+      "\\do": 873,
+      "\\unboldmath": 874,
+      "\\cite": 875,
+      "sep": 876,
+      "\\triangleright": 877,
+      "---": 878,
+      "nter": 879,
+      "\\amalg": 880,
+      "group": 881,
+      "\\lefteqn": 882,
+      "\\LARGE": 883,
+      "\\ensuremath": 884,
+      "AA": 885,
+      "\\'": 886,
+      "\\*": 887,
+      "\\AA": 888,
+      "ch": 889,
+      "com": 890,
+      "cou": 891,
+      "ew": 892,
+      "harpo": 893,
+      "ile": 894,
+      "lti": 895,
+      "lim": 896,
+      "mp": 897,
+      "new": 898,
+      "oalign": 899,
+      "sy": 900,
+      "tch": 901,
+      "rave": 902,
+      "\\multi": 903,
+      "mand": 904,
+      "\\rightleft": 905,
+      "\\crc": 906,
+      "\\ske": 907,
+      "\\vss": 908,
+      "\\oslash": 909,
+      "\\ooalign": 910,
+      "ons": 911,
+      "\\grave": 912,
+      "\\Bigm": 913,
+      "stre": 914,
+      "\\ae": 915,
+      "\\asy": 916,
+      "\\smile": 917,
+      "\\protectu": 918,
+      "\\renew": 919,
+      "\\fboxsep": 920,
+      "\\setcou": 921,
+      "\\sqcap": 922,
+      "\\arraystre": 923,
+      "command": 924,
+      "harpoons": 925,
+      "\\rightleftharpoons": 926,
+      "\\crcr": 927,
+      "\\skew": 928,
+      "\\asymp": 929,
+      "\\renewcommand": 930,
+      "\\setcounter": 931,
+      "\\arraystretch": 932,
+      "Hu": 933,
+      "\\arrow": 934,
+      "\\Hu": 935,
+      "ak": 936,
+      "bu": 937,
+      "bin": 938,
+      "bre": 939,
+      "cup": 940,
+      "ith": 941,
+      "lar": 942,
+      "put": 943,
+      "qcup": 944,
+      "sup": 945,
+      "sqcup": 946,
+      "tt": 947,
+      "warrow": 948,
+      "with": 949,
+      "{ta": 950,
+      "\\lg": 951,
+      "\\lq": 952,
+      "\\lgroup": 953,
+      "\\mskip": 954,
+      "\\brac": 955,
+      "sion": 956,
+      "\\left\\lfloor": 957,
+      "delim": 958,
+      "\\parbox": 959,
+      "\\mathver": 960,
+      "\\mathrel": 961,
+      "\\mathbin": 962,
+      "\\Downarrow": 963,
+      "linebre": 964,
+      "\\bigsqcup": 965,
+      "\\SS": 966,
+      "\\hphantom": 967,
+      "\\hss": 968,
+      "\\limsup": 969,
+      "\\texttt": 970,
+      "\\rgroup": 971,
+      "\\nearrow": 972,
+      "\\smallint": 973,
+      "vert": 974,
+      "\\searrow": 975,
+      "\\notin": 976,
+      "\\nolinebre": 977,
+      "col": 978,
+      "\\succeq": 979,
+      "\\multiput": 980,
+      "\\arrowvert": 981,
+      "\\Huge": 982,
+      "bular": 983,
+      "withdelim": 984,
+      "{tabular": 985,
+      "\\mathversion": 986,
+      "\\nolinebreak": 987,
+      "withdelims": 988,
+      "{tabular}": 989,
+      "\\^": 990,
+      "\\ro": 991,
+      "\\rc": 992,
+      "ave": 993,
+      "cce": 994,
+      "en": 995,
+      "eil": 996,
+      "ill": 997,
+      "llde": 998,
+      "mn": 999,
+      "mo": 1000,
+      "mar": 1001,
+      "ol": 1002,
+      "rb": 1003,
+      "tor": 1004,
+      "umn": 1005,
+      "vmo": 1006,
+      "ymb": 1007,
+      "\\fill": 1008,
+      "hacce": 1009,
+      "\\leave": 1010,
+      "\\left/": 1011,
+      "\\left>": 1012,
+      "\\left]": 1013,
+      "\\left\\lceil": 1014,
+      "inf": 1015,
+      "\\right/": 1016,
+      "\\right<": 1017,
+      "\\right[": 1018,
+      "\\right\\rc": 1019,
+      "\\swarrow": 1020,
+      "\\symb": 1021,
+      "\\nwarrow": 1022,
+      "\\mathst": 1023,
+      "\\mathor": 1024,
+      "\\nullde": 1025,
+      "\\vce": 1026,
+      "\\of": 1027,
+      "\\verb": 1028,
+      "erspace": 1029,
+      "\\vector": 1030,
+      "\\begin{tabular}": 1031,
+      "\\end{tabular}": 1032,
+      "\\bigve": 1033,
+      "\\overwithdelims": 1034,
+      "\\rightarrowfi": 1035,
+      "\\mathclo": 1036,
+      "\\biggm": 1037,
+      "\\liminf": 1038,
+      "\\triangleleft": 1039,
+      "\\atopwithdelims": 1040,
+      "\\protectE": 1041,
+      "\\protectZ": 1042,
+      "\\protecte": 1043,
+      "\\protectm": 1044,
+      "\\footnotemar": 1045,
+      "\\mathopen": 1046,
+      "\\mathacce": 1047,
+      "iterspace": 1048,
+      "\\preceq": 1049,
+      "\\arraycol": 1050,
+      "limiterspace": 1051,
+      "\\multicol": 1052,
+      "\\brace": 1053,
+      "\\brack": 1054,
+      "\\root": 1055,
+      "vmode": 1056,
+      "\\leavevmode": 1057,
+      "\\right\\rceil": 1058,
+      "\\symbol": 1059,
+      "\\mathstrut": 1060,
+      "\\mathord": 1061,
+      "\\nulldelimiterspace": 1062,
+      "\\vcenter": 1063,
+      "\\bigvee": 1064,
+      "\\rightarrowfill": 1065,
+      "\\mathclose": 1066,
+      "\\footnotemark": 1067,
+      "\\mathaccent": 1068,
+      "\\arraycolsep": 1069,
+      "\\multicolumn": 1070
+    },
+    "merges": [
+      [
+        "\\",
+        "p"
+      ],
+      [
+        "r",
+        "a"
+      ],
+      [
+        "ra",
+        "c"
+      ],
+      [
+        "\\",
+        "f"
+      ],
+      [
+        "\\f",
+        "rac"
+      ],
+      [
+        "t",
+        "a"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "\\",
+        "l"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "\\",
+        "m"
+      ],
+      [
+        "r",
+        "i"
+      ],
+      [
+        "\\",
+        "b"
+      ],
+      [
+        "s",
+        "i"
+      ],
+      [
+        "t",
+        "i"
+      ],
+      [
+        "f",
+        "t"
+      ],
+      [
+        "e",
+        "ta"
+      ],
+      [
+        "a",
+        "m"
+      ],
+      [
+        "\\m",
+        "u"
+      ],
+      [
+        "h",
+        "a"
+      ],
+      [
+        "g",
+        "h"
+      ],
+      [
+        "ri",
+        "gh"
+      ],
+      [
+        "m",
+        "e"
+      ],
+      [
+        "\\",
+        "righ"
+      ],
+      [
+        "h",
+        "i"
+      ],
+      [
+        "m",
+        "a"
+      ],
+      [
+        "\\l",
+        "e"
+      ],
+      [
+        "t",
+        "h"
+      ],
+      [
+        "\\le",
+        "ft"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "\\righ",
+        "t"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "\\",
+        "c"
+      ],
+      [
+        "\\p",
+        "ar"
+      ],
+      [
+        "ti",
+        "al"
+      ],
+      [
+        "\\par",
+        "tial"
+      ],
+      [
+        "p",
+        "ha"
+      ],
+      [
+        "\\",
+        "al"
+      ],
+      [
+        "\\al",
+        "pha"
+      ],
+      [
+        "\\",
+        "s"
+      ],
+      [
+        "d",
+        "a"
+      ],
+      [
+        "\\",
+        "n"
+      ],
+      [
+        "\\",
+        "e"
+      ],
+      [
+        "\\",
+        "in"
+      ],
+      [
+        "\\right",
+        ")"
+      ],
+      [
+        "\\left",
+        "("
+      ],
+      [
+        "l",
+        "ta"
+      ],
+      [
+        "b",
+        "da"
+      ],
+      [
+        "am",
+        "bda"
+      ],
+      [
+        "\\m",
+        "a"
+      ],
+      [
+        "\\ma",
+        "th"
+      ],
+      [
+        "\\p",
+        "ri"
+      ],
+      [
+        "\\pri",
+        "me"
+      ],
+      [
+        "\\n",
+        "u"
+      ],
+      [
+        "\\",
+        "v"
+      ],
+      [
+        "\\p",
+        "i"
+      ],
+      [
+        "am",
+        "ma"
+      ],
+      [
+        "\\",
+        "si"
+      ],
+      [
+        "o",
+        "t"
+      ],
+      [
+        "\\p",
+        "hi"
+      ],
+      [
+        "d",
+        "ot"
+      ],
+      [
+        "r",
+        "m"
+      ],
+      [
+        "\\",
+        "de"
+      ],
+      [
+        "\\math",
+        "rm"
+      ],
+      [
+        "q",
+        "u"
+      ],
+      [
+        "\\c",
+        "al"
+      ],
+      [
+        "\\",
+        "o"
+      ],
+      [
+        "\\de",
+        "lta"
+      ],
+      [
+        "g",
+        "ma"
+      ],
+      [
+        "\\l",
+        "ambda"
+      ],
+      [
+        "\\b",
+        "eta"
+      ],
+      [
+        "\\b",
+        "ar"
+      ],
+      [
+        "\\in",
+        "t"
+      ],
+      [
+        "\\",
+        "P"
+      ],
+      [
+        "g",
+        "a"
+      ],
+      [
+        "me",
+        "ga"
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "th",
+        "eta"
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "\\",
+        "g"
+      ],
+      [
+        "r",
+        "t"
+      ],
+      [
+        "\\si",
+        "gma"
+      ],
+      [
+        "\\",
+        "\\"
+      ],
+      [
+        "\\",
+        "theta"
+      ],
+      [
+        "a",
+        "d"
+      ],
+      [
+        "qu",
+        "ad"
+      ],
+      [
+        "l",
+        "de"
+      ],
+      [
+        "ti",
+        "lde"
+      ],
+      [
+        "l",
+        "on"
+      ],
+      [
+        "p",
+        "si"
+      ],
+      [
+        "psi",
+        "lon"
+      ],
+      [
+        "ha",
+        "t"
+      ],
+      [
+        "\\g",
+        "amma"
+      ],
+      [
+        "\\p",
+        "si"
+      ],
+      [
+        "\\s",
+        "u"
+      ],
+      [
+        "\\",
+        "hat"
+      ],
+      [
+        "\\s",
+        "q"
+      ],
+      [
+        "\\sq",
+        "rt"
+      ],
+      [
+        "h",
+        "o"
+      ],
+      [
+        "r",
+        "ho"
+      ],
+      [
+        "\\su",
+        "m"
+      ],
+      [
+        "g",
+        "le"
+      ],
+      [
+        "n",
+        "gle"
+      ],
+      [
+        "\\",
+        "rho"
+      ],
+      [
+        "\\",
+        "tilde"
+      ],
+      [
+        "\\",
+        "ta"
+      ],
+      [
+        "\\v",
+        "ar"
+      ],
+      [
+        "\\ta",
+        "u"
+      ],
+      [
+        "\\v",
+        "e"
+      ],
+      [
+        "ra",
+        "y"
+      ],
+      [
+        "ar",
+        "ray"
+      ],
+      [
+        "{",
+        "array"
+      ],
+      [
+        "{array",
+        "}"
+      ],
+      [
+        "\\o",
+        "mega"
+      ],
+      [
+        "\\e",
+        "psilon"
+      ],
+      [
+        "r",
+        "o"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        "\\b",
+        "f"
+      ],
+      [
+        "\\",
+        "eta"
+      ],
+      [
+        "x",
+        "i"
+      ],
+      [
+        "\\",
+        "xi"
+      ],
+      [
+        "\\P",
+        "hi"
+      ],
+      [
+        "\\",
+        "quad"
+      ],
+      [
+        "\\ve",
+        "c"
+      ],
+      [
+        "i",
+        "g"
+      ],
+      [
+        "\\",
+        "dot"
+      ],
+      [
+        "\\c",
+        "dot"
+      ],
+      [
+        "G",
+        "amma"
+      ],
+      [
+        "\\",
+        "Gamma"
+      ],
+      [
+        "\\",
+        "{"
+      ],
+      [
+        "ft",
+        "y"
+      ],
+      [
+        "\\in",
+        "fty"
+      ],
+      [
+        "\\",
+        "L"
+      ],
+      [
+        "\\",
+        "ra"
+      ],
+      [
+        "\\right",
+        "]"
+      ],
+      [
+        "\\left",
+        "["
+      ],
+      [
+        "\\ra",
+        "ngle"
+      ],
+      [
+        "\\",
+        "}"
+      ],
+      [
+        "\\p",
+        "m"
+      ],
+      [
+        "\\L",
+        "ambda"
+      ],
+      [
+        "a",
+        "p"
+      ],
+      [
+        "ta",
+        "r"
+      ],
+      [
+        "\\var",
+        "p"
+      ],
+      [
+        "ap",
+        "p"
+      ],
+      [
+        "\\varp",
+        "hi"
+      ],
+      [
+        "\\",
+        "D"
+      ],
+      [
+        "e",
+        "lta"
+      ],
+      [
+        "\\D",
+        "elta"
+      ],
+      [
+        "\\e",
+        "n"
+      ],
+      [
+        "e",
+        "g"
+      ],
+      [
+        "\\b",
+        "eg"
+      ],
+      [
+        "\\beg",
+        "in"
+      ],
+      [
+        "\\en",
+        "d"
+      ],
+      [
+        "\\",
+        "O"
+      ],
+      [
+        "ro",
+        "w"
+      ],
+      [
+        "\\c",
+        "hi"
+      ],
+      [
+        "\\O",
+        "mega"
+      ],
+      [
+        "in",
+        "e"
+      ],
+      [
+        "l",
+        "ine"
+      ],
+      [
+        "tar",
+        "row"
+      ],
+      [
+        "\\",
+        "w"
+      ],
+      [
+        "\\",
+        "k"
+      ],
+      [
+        "app",
+        "a"
+      ],
+      [
+        "\\k",
+        "appa"
+      ],
+      [
+        "\\",
+        "q"
+      ],
+      [
+        "\\q",
+        "quad"
+      ],
+      [
+        "\\begin",
+        "{array}"
+      ],
+      [
+        "\\end",
+        "{array}"
+      ],
+      [
+        "a",
+        "ngle"
+      ],
+      [
+        "\\P",
+        "si"
+      ],
+      [
+        "i",
+        "v"
+      ],
+      [
+        "\\e",
+        "qu"
+      ],
+      [
+        "\\equ",
+        "iv"
+      ],
+      [
+        "l",
+        "a"
+      ],
+      [
+        "\\l",
+        "angle"
+      ],
+      [
+        "da",
+        "g"
+      ],
+      [
+        "\\",
+        "dag"
+      ],
+      [
+        "\\b",
+        "ig"
+      ],
+      [
+        "v",
+        "er"
+      ],
+      [
+        "\\o",
+        "ver"
+      ],
+      [
+        "ti",
+        "me"
+      ],
+      [
+        "time",
+        "s"
+      ],
+      [
+        "\\over",
+        "line"
+      ],
+      [
+        "\\",
+        "!"
+      ],
+      [
+        "B",
+        "ig"
+      ],
+      [
+        "\\",
+        "Big"
+      ],
+      [
+        "\\righ",
+        "tarrow"
+      ],
+      [
+        "g",
+        "er"
+      ],
+      [
+        "\\dag",
+        "ger"
+      ],
+      [
+        "s",
+        "t"
+      ],
+      [
+        "\\si",
+        "n"
+      ],
+      [
+        "\\",
+        "z"
+      ],
+      [
+        "\\z",
+        "eta"
+      ],
+      [
+        "e",
+        "psilon"
+      ],
+      [
+        "\\var",
+        "epsilon"
+      ],
+      [
+        "a",
+        "b"
+      ],
+      [
+        "\\n",
+        "ab"
+      ],
+      [
+        "\\nab",
+        "la"
+      ],
+      [
+        "\\c",
+        "o"
+      ],
+      [
+        "x",
+        "p"
+      ],
+      [
+        "\\e",
+        "xp"
+      ],
+      [
+        "\\",
+        "t"
+      ],
+      [
+        "\\co",
+        "s"
+      ],
+      [
+        "\\",
+        "S"
+      ],
+      [
+        "dot",
+        "s"
+      ],
+      [
+        "i",
+        "de"
+      ],
+      [
+        "\\w",
+        "ide"
+      ],
+      [
+        "i",
+        "gma"
+      ],
+      [
+        "\\S",
+        "igma"
+      ],
+      [
+        "l",
+        "l"
+      ],
+      [
+        "\\cdot",
+        "s"
+      ],
+      [
+        "\\l",
+        "n"
+      ],
+      [
+        "\\math",
+        "c"
+      ],
+      [
+        "\\mathc",
+        "al"
+      ],
+      [
+        "\\l",
+        "dots"
+      ],
+      [
+        "\\left",
+        "\\{"
+      ],
+      [
+        "\\e",
+        "ll"
+      ],
+      [
+        "\\",
+        ":"
+      ],
+      [
+        "\\p",
+        "ro"
+      ],
+      [
+        "g",
+        "e"
+      ],
+      [
+        "\\",
+        "h"
+      ],
+      [
+        "\\o",
+        "times"
+      ],
+      [
+        "e",
+        "d"
+      ],
+      [
+        "ed",
+        "ge"
+      ],
+      [
+        "\\si",
+        "m"
+      ],
+      [
+        "\\w",
+        "edge"
+      ],
+      [
+        "\\P",
+        "i"
+      ],
+      [
+        "t",
+        "ri"
+      ],
+      [
+        "\\pro",
+        "d"
+      ],
+      [
+        "b",
+        "ar"
+      ],
+      [
+        "\\h",
+        "bar"
+      ],
+      [
+        "\\",
+        "d"
+      ],
+      [
+        "x",
+        "}"
+      ],
+      [
+        "{",
+        "ma"
+      ],
+      [
+        "tri",
+        "x}"
+      ],
+      [
+        "{ma",
+        "trix}"
+      ],
+      [
+        "y",
+        "le"
+      ],
+      [
+        "st",
+        "yle"
+      ],
+      [
+        "\\ve",
+        "rt"
+      ],
+      [
+        "\\wide",
+        "tilde"
+      ],
+      [
+        "\\right",
+        "\\}"
+      ],
+      [
+        "\\big",
+        "g"
+      ],
+      [
+        "\\t",
+        "o"
+      ],
+      [
+        "\\",
+        "u"
+      ],
+      [
+        "\\m",
+        "i"
+      ],
+      [
+        "T",
+        "h"
+      ],
+      [
+        "\\",
+        "Th"
+      ],
+      [
+        "\\Th",
+        "eta"
+      ],
+      [
+        "\\",
+        "times"
+      ],
+      [
+        "\\mi",
+        "d"
+      ],
+      [
+        "e",
+        "q"
+      ],
+      [
+        "\\",
+        "a"
+      ],
+      [
+        "c",
+        "k"
+      ],
+      [
+        "\\u",
+        "n"
+      ],
+      [
+        "\\right",
+        "|"
+      ],
+      [
+        "b",
+        "f"
+      ],
+      [
+        "de",
+        "r"
+      ],
+      [
+        "\\un",
+        "der"
+      ],
+      [
+        "\\math",
+        "bf"
+      ],
+      [
+        "r",
+        "e"
+      ],
+      [
+        "\\under",
+        "line"
+      ],
+      [
+        "p",
+        "t"
+      ],
+      [
+        "righ",
+        "tarrow"
+      ],
+      [
+        "s",
+        "p"
+      ],
+      [
+        "\\a",
+        "st"
+      ],
+      [
+        "\\dot",
+        "s"
+      ],
+      [
+        "\\left",
+        "|"
+      ],
+      [
+        "\\le",
+        "q"
+      ],
+      [
+        "\\",
+        "app"
+      ],
+      [
+        "ro",
+        "x"
+      ],
+      [
+        "\\app",
+        "rox"
+      ],
+      [
+        "\\s",
+        "tar"
+      ],
+      [
+        "\\l",
+        "o"
+      ],
+      [
+        "\\lo",
+        "g"
+      ],
+      [
+        "re",
+        "l"
+      ],
+      [
+        "\\wide",
+        "hat"
+      ],
+      [
+        "\\d",
+        "i"
+      ],
+      [
+        "ta",
+        "ck"
+      ],
+      [
+        "\\s",
+        "tack"
+      ],
+      [
+        "\\stack",
+        "rel"
+      ],
+      [
+        "\\sin",
+        "h"
+      ],
+      [
+        "i",
+        "m"
+      ],
+      [
+        "\\l",
+        "im"
+      ],
+      [
+        "\\right",
+        "."
+      ],
+      [
+        "y",
+        "style"
+      ],
+      [
+        "la",
+        "ystyle"
+      ],
+      [
+        "sp",
+        "laystyle"
+      ],
+      [
+        "\\di",
+        "splaystyle"
+      ],
+      [
+        "\\begin",
+        "{matrix}"
+      ],
+      [
+        "\\end",
+        "{matrix}"
+      ],
+      [
+        "\\p",
+        "er"
+      ],
+      [
+        "\\per",
+        "p"
+      ],
+      [
+        "\\cos",
+        "h"
+      ],
+      [
+        "ma",
+        "th"
+      ],
+      [
+        "\\de",
+        "t"
+      ],
+      [
+        "c",
+        "ri"
+      ],
+      [
+        "cri",
+        "pt"
+      ],
+      [
+        "on",
+        "g"
+      ],
+      [
+        "e",
+        "x"
+      ],
+      [
+        "\\t",
+        "ex"
+      ],
+      [
+        "\\tex",
+        "t"
+      ],
+      [
+        "\\left",
+        "."
+      ],
+      [
+        "\\",
+        "i"
+      ],
+      [
+        "\\g",
+        "eq"
+      ],
+      [
+        "\\m",
+        "p"
+      ],
+      [
+        "me",
+        "q"
+      ],
+      [
+        "\\si",
+        "meq"
+      ],
+      [
+        "\\Big",
+        "r"
+      ],
+      [
+        "\\var",
+        "theta"
+      ],
+      [
+        "ong",
+        "rightarrow"
+      ],
+      [
+        "\\right",
+        "\\rangle"
+      ],
+      [
+        "r",
+        "c"
+      ],
+      [
+        "\\c",
+        "i"
+      ],
+      [
+        "\\Big",
+        "l"
+      ],
+      [
+        "\\ci",
+        "rc"
+      ],
+      [
+        "\\n",
+        "eq"
+      ],
+      [
+        "u",
+        "s"
+      ],
+      [
+        "b",
+        "rac"
+      ],
+      [
+        "s",
+        "e"
+      ],
+      [
+        "\\l",
+        "ongrightarrow"
+      ],
+      [
+        "in",
+        "t"
+      ],
+      [
+        "l",
+        "us"
+      ],
+      [
+        "p",
+        "lus"
+      ],
+      [
+        "\\o",
+        "int"
+      ],
+      [
+        "\\s",
+        "cript"
+      ],
+      [
+        "\\bigg",
+        "l"
+      ],
+      [
+        "\\bigg",
+        "r"
+      ],
+      [
+        "\\ta",
+        "n"
+      ],
+      [
+        "\\text",
+        "style"
+      ],
+      [
+        "\\",
+        ","
+      ],
+      [
+        "\\Big",
+        "g"
+      ],
+      [
+        "\\n",
+        "ot"
+      ],
+      [
+        "\\left",
+        "\\langle"
+      ],
+      [
+        "\\big",
+        "r"
+      ],
+      [
+        "\\d",
+        "dot"
+      ],
+      [
+        "\\big",
+        "l"
+      ],
+      [
+        "l",
+        "d"
+      ],
+      [
+        "\\o",
+        "plus"
+      ],
+      [
+        "o",
+        "ld"
+      ],
+      [
+        "old",
+        "math"
+      ],
+      [
+        "X",
+        "i"
+      ],
+      [
+        "\\",
+        "Xi"
+      ],
+      [
+        "\\b",
+        "oldmath"
+      ],
+      [
+        "on",
+        "u"
+      ],
+      [
+        "se",
+        "t"
+      ],
+      [
+        "o",
+        "m"
+      ],
+      [
+        "brac",
+        "k"
+      ],
+      [
+        "\\",
+        "|"
+      ],
+      [
+        "l",
+        "le"
+      ],
+      [
+        "\\pro",
+        "pt"
+      ],
+      [
+        "\\propt",
+        "o"
+      ],
+      [
+        "ri",
+        "angle"
+      ],
+      [
+        "\\t",
+        "riangle"
+      ],
+      [
+        "m",
+        "b"
+      ],
+      [
+        "e",
+        "ck"
+      ],
+      [
+        "h",
+        "eck"
+      ],
+      [
+        "\\c",
+        "heck"
+      ],
+      [
+        "\\n",
+        "onu"
+      ],
+      [
+        "mb",
+        "er"
+      ],
+      [
+        "\\nonu",
+        "mber"
+      ],
+      [
+        "\\f",
+        "o"
+      ],
+      [
+        "c",
+        "e"
+      ],
+      [
+        "a",
+        "ce"
+      ],
+      [
+        "\\",
+        "R"
+      ],
+      [
+        "\\var",
+        "rho"
+      ],
+      [
+        "\\g",
+        "e"
+      ],
+      [
+        "sp",
+        "ace"
+      ],
+      [
+        "-",
+        "-"
+      ],
+      [
+        "\\i",
+        "math"
+      ],
+      [
+        "ra",
+        "ll"
+      ],
+      [
+        "\\fo",
+        "rall"
+      ],
+      [
+        "\\right",
+        ">"
+      ],
+      [
+        "s",
+        "cript"
+      ],
+      [
+        "\\script",
+        "script"
+      ],
+      [
+        "\\scriptscript",
+        "style"
+      ],
+      [
+        "\\s",
+        "p"
+      ],
+      [
+        "\\l",
+        "brack"
+      ],
+      [
+        "brac",
+        "e"
+      ],
+      [
+        "z",
+        "e"
+      ],
+      [
+        "si",
+        "ze"
+      ],
+      [
+        "p",
+        "st"
+      ],
+      [
+        "\\tan",
+        "h"
+      ],
+      [
+        "pst",
+        "o"
+      ],
+      [
+        "\\",
+        "r"
+      ],
+      [
+        "b",
+        "set"
+      ],
+      [
+        "\\su",
+        "bset"
+      ],
+      [
+        "ar",
+        "row"
+      ],
+      [
+        "u",
+        "p"
+      ],
+      [
+        "\\b",
+        "ot"
+      ],
+      [
+        "\\i",
+        "t"
+      ],
+      [
+        "\\ma",
+        "psto"
+      ],
+      [
+        "a",
+        "ra"
+      ],
+      [
+        "\\p",
+        "ara"
+      ],
+      [
+        "lle",
+        "l"
+      ],
+      [
+        "\\para",
+        "llel"
+      ],
+      [
+        "i",
+        "gh"
+      ],
+      [
+        "\\left",
+        "rightarrow"
+      ],
+      [
+        "\\R",
+        "igh"
+      ],
+      [
+        "\\Righ",
+        "tarrow"
+      ],
+      [
+        "o",
+        "ta"
+      ],
+      [
+        "\\i",
+        "ota"
+      ],
+      [
+        "\\text",
+        "rm"
+      ],
+      [
+        "n",
+        "t"
+      ],
+      [
+        "\\l",
+        "l"
+      ],
+      [
+        "\\script",
+        "size"
+      ],
+      [
+        "nt",
+        "om"
+      ],
+      [
+        "\\left",
+        "<"
+      ],
+      [
+        "\\",
+        "j"
+      ],
+      [
+        "\\b",
+        "in"
+      ],
+      [
+        "\\bin",
+        "om"
+      ],
+      [
+        "\\big",
+        "o"
+      ],
+      [
+        "\\b",
+        "u"
+      ],
+      [
+        "\\over",
+        "rightarrow"
+      ],
+      [
+        "\\h",
+        "space"
+      ],
+      [
+        "\\j",
+        "math"
+      ],
+      [
+        "ft",
+        "rightarrow"
+      ],
+      [
+        "a",
+        "se"
+      ],
+      [
+        "c",
+        "ase"
+      ],
+      [
+        "o",
+        "p"
+      ],
+      [
+        "s",
+        "}"
+      ],
+      [
+        "{",
+        "case"
+      ],
+      [
+        "{case",
+        "s}"
+      ],
+      [
+        "\\",
+        "ar"
+      ],
+      [
+        "\\n",
+        "e"
+      ],
+      [
+        "u",
+        "t"
+      ],
+      [
+        "ti",
+        "n"
+      ],
+      [
+        "\\p",
+        "ha"
+      ],
+      [
+        "\\pha",
+        "ntom"
+      ],
+      [
+        "\\",
+        "tin"
+      ],
+      [
+        "\\c",
+        "ong"
+      ],
+      [
+        "\\s",
+        "f"
+      ],
+      [
+        "\\tin",
+        "y"
+      ],
+      [
+        "s",
+        "h"
+      ],
+      [
+        "\\Bigg",
+        "r"
+      ],
+      [
+        "\\g",
+        "g"
+      ],
+      [
+        "\\Bigg",
+        "l"
+      ],
+      [
+        "\\s",
+        "m"
+      ],
+      [
+        "U",
+        "psilon"
+      ],
+      [
+        "\\",
+        "Upsilon"
+      ],
+      [
+        "al",
+        "l"
+      ],
+      [
+        "\\sm",
+        "all"
+      ],
+      [
+        "o",
+        "w"
+      ],
+      [
+        "ow",
+        "n"
+      ],
+      [
+        "v",
+        "e"
+      ],
+      [
+        "lle",
+        "t"
+      ],
+      [
+        "\\bu",
+        "llet"
+      ],
+      [
+        "\\ve",
+        "e"
+      ],
+      [
+        "la",
+        "sh"
+      ],
+      [
+        "\\b",
+        "re"
+      ],
+      [
+        "\\bigo",
+        "plus"
+      ],
+      [
+        "\\bre",
+        "ve"
+      ],
+      [
+        "ot",
+        "e"
+      ],
+      [
+        "\\w",
+        "p"
+      ],
+      [
+        "\\ar",
+        "c"
+      ],
+      [
+        "b",
+        "o"
+      ],
+      [
+        "\\script",
+        "style"
+      ],
+      [
+        "own",
+        "arrow"
+      ],
+      [
+        "bo",
+        "x"
+      ],
+      [
+        "t",
+        "op"
+      ],
+      [
+        "on",
+        "gle"
+      ],
+      [
+        "\\a",
+        "top"
+      ],
+      [
+        "\\c",
+        "ot"
+      ],
+      [
+        "\\d",
+        "ownarrow"
+      ],
+      [
+        "\\su",
+        "p"
+      ],
+      [
+        "\\varp",
+        "i"
+      ],
+      [
+        "\\co",
+        "th"
+      ],
+      [
+        "\\r",
+        "brack"
+      ],
+      [
+        "\\k",
+        "er"
+      ],
+      [
+        "f",
+        "tarrow"
+      ],
+      [
+        "\\",
+        "#"
+      ],
+      [
+        "ongle",
+        "ftrightarrow"
+      ],
+      [
+        "c",
+        "t"
+      ],
+      [
+        "\\s",
+        "b"
+      ],
+      [
+        "\\v",
+        "dots"
+      ],
+      [
+        "p",
+        "arrow"
+      ],
+      [
+        "ar",
+        "ge"
+      ],
+      [
+        "\\u",
+        "parrow"
+      ],
+      [
+        "\\sup",
+        "set"
+      ],
+      [
+        "\\c",
+        "ap"
+      ],
+      [
+        "I",
+        "m"
+      ],
+      [
+        "\\",
+        "Im"
+      ],
+      [
+        "\\c",
+        "up"
+      ],
+      [
+        "\\ker",
+        "n"
+      ],
+      [
+        "ar",
+        "p"
+      ],
+      [
+        "ta",
+        "n"
+      ],
+      [
+        "\\s",
+        "lash"
+      ],
+      [
+        "\\arc",
+        "tan"
+      ],
+      [
+        "\\u",
+        "psilon"
+      ],
+      [
+        "\\R",
+        "e"
+      ],
+      [
+        "\\L",
+        "ongrightarrow"
+      ],
+      [
+        "\\mi",
+        "t"
+      ],
+      [
+        "\\begin",
+        "{cases}"
+      ],
+      [
+        "\\end",
+        "{cases}"
+      ],
+      [
+        "\\under",
+        "brace"
+      ],
+      [
+        "c",
+        "ut"
+      ],
+      [
+        "\\d",
+        "dots"
+      ],
+      [
+        "\\a",
+        "cut"
+      ],
+      [
+        "\\acut",
+        "e"
+      ],
+      [
+        "i",
+        "se"
+      ],
+      [
+        "\\l",
+        "brace"
+      ],
+      [
+        "\\ra",
+        "ise"
+      ],
+      [
+        "\\r",
+        "brace"
+      ],
+      [
+        "r",
+        "ote"
+      ],
+      [
+        "\\p",
+        "rote"
+      ],
+      [
+        "\\big",
+        "tri"
+      ],
+      [
+        "\\prote",
+        "ct"
+      ],
+      [
+        "\\bigtri",
+        "angle"
+      ],
+      [
+        "\\h",
+        "line"
+      ],
+      [
+        "\\m",
+        "in"
+      ],
+      [
+        "si",
+        "gma"
+      ],
+      [
+        "\\var",
+        "sigma"
+      ],
+      [
+        "s",
+        "f"
+      ],
+      [
+        "\\di",
+        "m"
+      ],
+      [
+        "o",
+        "r"
+      ],
+      [
+        "l",
+        "o"
+      ],
+      [
+        "f",
+        "lo"
+      ],
+      [
+        "flo",
+        "or"
+      ],
+      [
+        "\\math",
+        "sf"
+      ],
+      [
+        "e",
+        "ftrightarrow"
+      ],
+      [
+        "\\l",
+        "ongleftrightarrow"
+      ],
+      [
+        "\\s",
+        "e"
+      ],
+      [
+        "\\L",
+        "eftrightarrow"
+      ],
+      [
+        "arp",
+        "o"
+      ],
+      [
+        "\\bigtriangle",
+        "up"
+      ],
+      [
+        "i",
+        "p"
+      ],
+      [
+        "k",
+        "ip"
+      ],
+      [
+        "s",
+        "kip"
+      ],
+      [
+        "\\L",
+        "arge"
+      ],
+      [
+        "f",
+        "i"
+      ],
+      [
+        "\\righ",
+        "th"
+      ],
+      [
+        "\\v",
+        "space"
+      ],
+      [
+        "onu",
+        "p"
+      ],
+      [
+        "arpo",
+        "onup"
+      ],
+      [
+        "\\righth",
+        "arpoonup"
+      ],
+      [
+        "n",
+        "ote"
+      ],
+      [
+        "\\le",
+        "ftarrow"
+      ],
+      [
+        "ot",
+        "note"
+      ],
+      [
+        "\\h",
+        "fi"
+      ],
+      [
+        "\\fo",
+        "otnote"
+      ],
+      [
+        "V",
+        "e"
+      ],
+      [
+        "\\",
+        "Ve"
+      ],
+      [
+        "g",
+        "th"
+      ],
+      [
+        "n",
+        "gth"
+      ],
+      [
+        "t",
+        "le"
+      ],
+      [
+        "\\footnote",
+        "size"
+      ],
+      [
+        "\\Ve",
+        "rt"
+      ],
+      [
+        "tle",
+        "ngth"
+      ],
+      [
+        "k",
+        "e"
+      ],
+      [
+        "\\L",
+        "ongleftrightarrow"
+      ],
+      [
+        "\\en",
+        "space"
+      ],
+      [
+        "\\",
+        "re"
+      ],
+      [
+        "\\l",
+        "arge"
+      ],
+      [
+        "\\right",
+        "\\vert"
+      ],
+      [
+        "\\left",
+        "\\vert"
+      ],
+      [
+        "\\e",
+        "m"
+      ],
+      [
+        "\\ma",
+        "ke"
+      ],
+      [
+        "\\de",
+        "g"
+      ],
+      [
+        "\\cdot",
+        "p"
+      ],
+      [
+        "\\big",
+        "c"
+      ],
+      [
+        "\\text",
+        "bf"
+      ],
+      [
+        "\\hfi",
+        "ll"
+      ],
+      [
+        "\\make",
+        "box"
+      ],
+      [
+        "n",
+        "d"
+      ],
+      [
+        "\\p",
+        "ut"
+      ],
+      [
+        "pha",
+        "ntom"
+      ],
+      [
+        "\\dot",
+        "eq"
+      ],
+      [
+        "\\bigo",
+        "times"
+      ],
+      [
+        "\\raise",
+        "box"
+      ],
+      [
+        "y",
+        "set"
+      ],
+      [
+        "\\ma",
+        "x"
+      ],
+      [
+        "\\t",
+        "t"
+      ],
+      [
+        "pt",
+        "yset"
+      ],
+      [
+        "\\em",
+        "ptyset"
+      ],
+      [
+        "s",
+        "lash"
+      ],
+      [
+        "\\math",
+        "op"
+      ],
+      [
+        "\\v",
+        "phantom"
+      ],
+      [
+        "\\r",
+        "floor"
+      ],
+      [
+        "\\left",
+        "\\|"
+      ],
+      [
+        "\\right",
+        "\\|"
+      ],
+      [
+        "\\s",
+        "l"
+      ],
+      [
+        "le",
+        "ftarrow"
+      ],
+      [
+        "\\over",
+        "leftarrow"
+      ],
+      [
+        "\\n",
+        "o"
+      ],
+      [
+        "\\ll",
+        "ap"
+      ],
+      [
+        "a",
+        "ck"
+      ],
+      [
+        "h",
+        "arp"
+      ],
+      [
+        "u",
+        "re"
+      ],
+      [
+        "\\b",
+        "ack"
+      ],
+      [
+        "am",
+        "on"
+      ],
+      [
+        "\\s",
+        "harp"
+      ],
+      [
+        "\\di",
+        "amon"
+      ],
+      [
+        "\\ar",
+        "g"
+      ],
+      [
+        "\\back",
+        "slash"
+      ],
+      [
+        "\\diamon",
+        "d"
+      ],
+      [
+        "\\t",
+        "hi"
+      ],
+      [
+        "i",
+        "ld"
+      ],
+      [
+        "m",
+        "in"
+      ],
+      [
+        "\\bu",
+        "ild"
+      ],
+      [
+        "\\re",
+        "f"
+      ],
+      [
+        "min",
+        "us"
+      ],
+      [
+        "\\build",
+        "rel"
+      ],
+      [
+        "\\f",
+        "la"
+      ],
+      [
+        "\\fla",
+        "t"
+      ],
+      [
+        "i",
+        "ct"
+      ],
+      [
+        "p",
+        "ict"
+      ],
+      [
+        "{",
+        "pict"
+      ],
+      [
+        "\\o",
+        "dot"
+      ],
+      [
+        "\\text",
+        "up"
+      ],
+      [
+        "ure",
+        "}"
+      ],
+      [
+        "{pict",
+        "ure}"
+      ],
+      [
+        "r",
+        "ut"
+      ],
+      [
+        "\\ma",
+        "t"
+      ],
+      [
+        "\\",
+        "/"
+      ],
+      [
+        "e",
+        "l"
+      ],
+      [
+        "o",
+        "u"
+      ],
+      [
+        "t",
+        "rut"
+      ],
+      [
+        "\\l",
+        "ab"
+      ],
+      [
+        "hi",
+        "t"
+      ],
+      [
+        "\\s",
+        "trut"
+      ],
+      [
+        "\\bigc",
+        "up"
+      ],
+      [
+        "\\mat",
+        "hit"
+      ],
+      [
+        "\\lab",
+        "el"
+      ],
+      [
+        "n",
+        "space"
+      ],
+      [
+        "al",
+        "ig"
+      ],
+      [
+        "\\l",
+        "on"
+      ],
+      [
+        "gma",
+        "psto"
+      ],
+      [
+        "\\over",
+        "brace"
+      ],
+      [
+        "\\thi",
+        "nspace"
+      ],
+      [
+        "alig",
+        "n"
+      ],
+      [
+        "\\lon",
+        "gmapsto"
+      ],
+      [
+        "i",
+        "tlength"
+      ],
+      [
+        "o",
+        "d"
+      ],
+      [
+        "\\un",
+        "itlength"
+      ],
+      [
+        "\\p",
+        "ou"
+      ],
+      [
+        "\\co",
+        "lon"
+      ],
+      [
+        "\\subset",
+        "eq"
+      ],
+      [
+        "\\se",
+        "tlength"
+      ],
+      [
+        "nd",
+        "s"
+      ],
+      [
+        "\\pou",
+        "nds"
+      ],
+      [
+        "\\f",
+        "box"
+      ],
+      [
+        "\\n",
+        "i"
+      ],
+      [
+        "\\no",
+        "align"
+      ],
+      [
+        "\\o",
+        "minus"
+      ],
+      [
+        "\\en",
+        "skip"
+      ],
+      [
+        "\\",
+        "_"
+      ],
+      [
+        "w",
+        "edge"
+      ],
+      [
+        "\\l",
+        "ine"
+      ],
+      [
+        "\\l",
+        "floor"
+      ],
+      [
+        "\\big",
+        "wedge"
+      ],
+      [
+        "c",
+        "o"
+      ],
+      [
+        "e",
+        "p"
+      ],
+      [
+        "\\al",
+        "ep"
+      ],
+      [
+        "\\alep",
+        "h"
+      ],
+      [
+        "\\circ",
+        "le"
+      ],
+      [
+        "d",
+        "own"
+      ],
+      [
+        "si",
+        "n"
+      ],
+      [
+        "\\v",
+        "line"
+      ],
+      [
+        "rm",
+        "al"
+      ],
+      [
+        "\\begin",
+        "{picture}"
+      ],
+      [
+        "\\end",
+        "{picture}"
+      ],
+      [
+        "\\arc",
+        "co"
+      ],
+      [
+        "\\arc",
+        "sin"
+      ],
+      [
+        "ongle",
+        "ftarrow"
+      ],
+      [
+        "\\bigtriangle",
+        "down"
+      ],
+      [
+        "\\se",
+        "t"
+      ],
+      [
+        "\\bigc",
+        "ap"
+      ],
+      [
+        "\\arcco",
+        "s"
+      ],
+      [
+        "\\",
+        "ho"
+      ],
+      [
+        "a",
+        "nd"
+      ],
+      [
+        "i",
+        "t"
+      ],
+      [
+        "k",
+        "rightarrow"
+      ],
+      [
+        "l",
+        "ap"
+      ],
+      [
+        "m",
+        "od"
+      ],
+      [
+        "o",
+        "krightarrow"
+      ],
+      [
+        "\\l",
+        "and"
+      ],
+      [
+        "\\b",
+        "mod"
+      ],
+      [
+        "\\left",
+        "\\lbrack"
+      ],
+      [
+        "\\right",
+        "\\rbrack"
+      ],
+      [
+        "\\d",
+        "dag"
+      ],
+      [
+        "\\sp",
+        "ace"
+      ],
+      [
+        "\\r",
+        "lap"
+      ],
+      [
+        "\\small",
+        "skip"
+      ],
+      [
+        "\\se",
+        "c"
+      ],
+      [
+        "\\ho",
+        "okrightarrow"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "s",
+        "u"
+      ],
+      [
+        "u",
+        "ra"
+      ],
+      [
+        "\\n",
+        "at"
+      ],
+      [
+        "\\diamond",
+        "su"
+      ],
+      [
+        "ura",
+        "l"
+      ],
+      [
+        "\\nat",
+        "ural"
+      ],
+      [
+        "\\diamondsu",
+        "it"
+      ],
+      [
+        "\\pm",
+        "od"
+      ],
+      [
+        "\\set",
+        "minus"
+      ],
+      [
+        "\\ddag",
+        "ger"
+      ],
+      [
+        "\\",
+        "&"
+      ],
+      [
+        "\\",
+        "-"
+      ],
+      [
+        "\\l",
+        "ongleftarrow"
+      ],
+      [
+        "ti",
+        "t"
+      ],
+      [
+        "\\right",
+        "\\rfloor"
+      ],
+      [
+        "\\sq",
+        "c"
+      ],
+      [
+        "\\tex",
+        "tit"
+      ],
+      [
+        "ra",
+        "me"
+      ],
+      [
+        "\\f",
+        "rame"
+      ],
+      [
+        "\\left",
+        "\\lbrace"
+      ],
+      [
+        "\\right",
+        "\\rbrace"
+      ],
+      [
+        "da",
+        "sh"
+      ],
+      [
+        "\\v",
+        "skip"
+      ],
+      [
+        "\\v",
+        "dash"
+      ],
+      [
+        "la",
+        "x"
+      ],
+      [
+        "\\big",
+        "m"
+      ],
+      [
+        "\\re",
+        "lax"
+      ],
+      [
+        "\\no",
+        "rmal"
+      ],
+      [
+        "\\frame",
+        "box"
+      ],
+      [
+        "\\normal",
+        "size"
+      ],
+      [
+        "i",
+        "l"
+      ],
+      [
+        "s",
+        "c"
+      ],
+      [
+        "w",
+        "er"
+      ],
+      [
+        "\\c",
+        "sc"
+      ],
+      [
+        "\\s",
+        "c"
+      ],
+      [
+        "line",
+        "s"
+      ],
+      [
+        "\\to",
+        "p"
+      ],
+      [
+        "ck",
+        "lines"
+      ],
+      [
+        "\\lo",
+        "wer"
+      ],
+      [
+        "\\hfi",
+        "l"
+      ],
+      [
+        "\\thi",
+        "cklines"
+      ],
+      [
+        "c",
+        "i"
+      ],
+      [
+        "e",
+        "ci"
+      ],
+      [
+        "k",
+        "er"
+      ],
+      [
+        "n",
+        "o"
+      ],
+      [
+        "p",
+        "e"
+      ],
+      [
+        "r",
+        "d"
+      ],
+      [
+        "s",
+        "s"
+      ],
+      [
+        "s",
+        "ha"
+      ],
+      [
+        "\\p",
+        "re"
+      ],
+      [
+        "\\l",
+        "ce"
+      ],
+      [
+        "\\m",
+        "ed"
+      ],
+      [
+        "\\m",
+        "ker"
+      ],
+      [
+        "ma",
+        "sh"
+      ],
+      [
+        "\\s",
+        "mash"
+      ],
+      [
+        "\\e",
+        "xi"
+      ],
+      [
+        "\\nu",
+        "ll"
+      ],
+      [
+        "\\su",
+        "rd"
+      ],
+      [
+        "st",
+        "s"
+      ],
+      [
+        "\\text",
+        "sf"
+      ],
+      [
+        "\\text",
+        "no"
+      ],
+      [
+        "\\Bigg",
+        "m"
+      ],
+      [
+        "\\sp",
+        "eci"
+      ],
+      [
+        "\\it",
+        "sha"
+      ],
+      [
+        "\\supset",
+        "eq"
+      ],
+      [
+        "\\sqc",
+        "up"
+      ],
+      [
+        "\\pre",
+        "c"
+      ],
+      [
+        "\\lce",
+        "il"
+      ],
+      [
+        "\\med",
+        "skip"
+      ],
+      [
+        "\\mker",
+        "n"
+      ],
+      [
+        "\\exi",
+        "sts"
+      ],
+      [
+        "\\textno",
+        "rmal"
+      ],
+      [
+        "\\speci",
+        "al"
+      ],
+      [
+        "\\itsha",
+        "pe"
+      ],
+      [
+        "A",
+        "R"
+      ],
+      [
+        "G",
+        "E"
+      ],
+      [
+        "\\",
+        "am"
+      ],
+      [
+        "\\",
+        "array"
+      ],
+      [
+        "b",
+        "oldmath"
+      ],
+      [
+        "c",
+        "c"
+      ],
+      [
+        "g",
+        "ro"
+      ],
+      [
+        "s",
+        "ure"
+      ],
+      [
+        "t",
+        "e"
+      ],
+      [
+        "al",
+        "g"
+      ],
+      [
+        "righ",
+        "t"
+      ],
+      [
+        "\\left",
+        "eq"
+      ],
+      [
+        "\\s",
+        "s"
+      ],
+      [
+        "\\in",
+        "f"
+      ],
+      [
+        "le",
+        "ft"
+      ],
+      [
+        "\\su",
+        "cc"
+      ],
+      [
+        "\\L",
+        "ongleftarrow"
+      ],
+      [
+        "\\L",
+        "AR"
+      ],
+      [
+        "\\en",
+        "sure"
+      ],
+      [
+        "\\d",
+        "o"
+      ],
+      [
+        "\\un",
+        "boldmath"
+      ],
+      [
+        "\\ci",
+        "te"
+      ],
+      [
+        "se",
+        "p"
+      ],
+      [
+        "\\triangle",
+        "right"
+      ],
+      [
+        "--",
+        "-"
+      ],
+      [
+        "nt",
+        "er"
+      ],
+      [
+        "\\am",
+        "alg"
+      ],
+      [
+        "gro",
+        "up"
+      ],
+      [
+        "\\lefteq",
+        "n"
+      ],
+      [
+        "\\LAR",
+        "GE"
+      ],
+      [
+        "\\ensure",
+        "math"
+      ],
+      [
+        "A",
+        "A"
+      ],
+      [
+        "\\",
+        "'"
+      ],
+      [
+        "\\",
+        "*"
+      ],
+      [
+        "\\",
+        "AA"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "c",
+        "om"
+      ],
+      [
+        "c",
+        "ou"
+      ],
+      [
+        "e",
+        "w"
+      ],
+      [
+        "h",
+        "arpo"
+      ],
+      [
+        "i",
+        "le"
+      ],
+      [
+        "l",
+        "ti"
+      ],
+      [
+        "l",
+        "im"
+      ],
+      [
+        "m",
+        "p"
+      ],
+      [
+        "n",
+        "ew"
+      ],
+      [
+        "o",
+        "align"
+      ],
+      [
+        "s",
+        "y"
+      ],
+      [
+        "t",
+        "ch"
+      ],
+      [
+        "ra",
+        "ve"
+      ],
+      [
+        "\\mu",
+        "lti"
+      ],
+      [
+        "ma",
+        "nd"
+      ],
+      [
+        "\\right",
+        "left"
+      ],
+      [
+        "\\c",
+        "rc"
+      ],
+      [
+        "\\s",
+        "ke"
+      ],
+      [
+        "\\v",
+        "ss"
+      ],
+      [
+        "\\o",
+        "slash"
+      ],
+      [
+        "\\o",
+        "oalign"
+      ],
+      [
+        "on",
+        "s"
+      ],
+      [
+        "\\g",
+        "rave"
+      ],
+      [
+        "\\Big",
+        "m"
+      ],
+      [
+        "st",
+        "re"
+      ],
+      [
+        "\\a",
+        "e"
+      ],
+      [
+        "\\a",
+        "sy"
+      ],
+      [
+        "\\sm",
+        "ile"
+      ],
+      [
+        "\\protect",
+        "u"
+      ],
+      [
+        "\\re",
+        "new"
+      ],
+      [
+        "\\fbox",
+        "sep"
+      ],
+      [
+        "\\set",
+        "cou"
+      ],
+      [
+        "\\sqc",
+        "ap"
+      ],
+      [
+        "\\array",
+        "stre"
+      ],
+      [
+        "com",
+        "mand"
+      ],
+      [
+        "harpo",
+        "ons"
+      ],
+      [
+        "\\rightleft",
+        "harpoons"
+      ],
+      [
+        "\\crc",
+        "r"
+      ],
+      [
+        "\\ske",
+        "w"
+      ],
+      [
+        "\\asy",
+        "mp"
+      ],
+      [
+        "\\renew",
+        "command"
+      ],
+      [
+        "\\setcou",
+        "nter"
+      ],
+      [
+        "\\arraystre",
+        "tch"
+      ],
+      [
+        "H",
+        "u"
+      ],
+      [
+        "\\",
+        "arrow"
+      ],
+      [
+        "\\",
+        "Hu"
+      ],
+      [
+        "a",
+        "k"
+      ],
+      [
+        "b",
+        "u"
+      ],
+      [
+        "b",
+        "in"
+      ],
+      [
+        "b",
+        "re"
+      ],
+      [
+        "c",
+        "up"
+      ],
+      [
+        "i",
+        "th"
+      ],
+      [
+        "l",
+        "ar"
+      ],
+      [
+        "p",
+        "ut"
+      ],
+      [
+        "q",
+        "cup"
+      ],
+      [
+        "s",
+        "up"
+      ],
+      [
+        "s",
+        "qcup"
+      ],
+      [
+        "t",
+        "t"
+      ],
+      [
+        "w",
+        "arrow"
+      ],
+      [
+        "w",
+        "ith"
+      ],
+      [
+        "{",
+        "ta"
+      ],
+      [
+        "\\l",
+        "g"
+      ],
+      [
+        "\\l",
+        "q"
+      ],
+      [
+        "\\l",
+        "group"
+      ],
+      [
+        "\\m",
+        "skip"
+      ],
+      [
+        "\\b",
+        "rac"
+      ],
+      [
+        "si",
+        "on"
+      ],
+      [
+        "\\left",
+        "\\lfloor"
+      ],
+      [
+        "de",
+        "lim"
+      ],
+      [
+        "\\par",
+        "box"
+      ],
+      [
+        "\\math",
+        "ver"
+      ],
+      [
+        "\\math",
+        "rel"
+      ],
+      [
+        "\\math",
+        "bin"
+      ],
+      [
+        "\\D",
+        "ownarrow"
+      ],
+      [
+        "line",
+        "bre"
+      ],
+      [
+        "\\big",
+        "sqcup"
+      ],
+      [
+        "\\S",
+        "S"
+      ],
+      [
+        "\\h",
+        "phantom"
+      ],
+      [
+        "\\h",
+        "ss"
+      ],
+      [
+        "\\lim",
+        "sup"
+      ],
+      [
+        "\\text",
+        "tt"
+      ],
+      [
+        "\\r",
+        "group"
+      ],
+      [
+        "\\ne",
+        "arrow"
+      ],
+      [
+        "\\small",
+        "int"
+      ],
+      [
+        "ve",
+        "rt"
+      ],
+      [
+        "\\se",
+        "arrow"
+      ],
+      [
+        "\\no",
+        "tin"
+      ],
+      [
+        "\\no",
+        "linebre"
+      ],
+      [
+        "co",
+        "l"
+      ],
+      [
+        "\\succ",
+        "eq"
+      ],
+      [
+        "\\multi",
+        "put"
+      ],
+      [
+        "\\arrow",
+        "vert"
+      ],
+      [
+        "\\Hu",
+        "ge"
+      ],
+      [
+        "bu",
+        "lar"
+      ],
+      [
+        "with",
+        "delim"
+      ],
+      [
+        "{ta",
+        "bular"
+      ],
+      [
+        "\\mathver",
+        "sion"
+      ],
+      [
+        "\\nolinebre",
+        "ak"
+      ],
+      [
+        "withdelim",
+        "s"
+      ],
+      [
+        "{tabular",
+        "}"
+      ],
+      [
+        "\\",
+        "^"
+      ],
+      [
+        "\\",
+        "ro"
+      ],
+      [
+        "\\",
+        "rc"
+      ],
+      [
+        "a",
+        "ve"
+      ],
+      [
+        "c",
+        "ce"
+      ],
+      [
+        "e",
+        "n"
+      ],
+      [
+        "e",
+        "il"
+      ],
+      [
+        "i",
+        "ll"
+      ],
+      [
+        "l",
+        "lde"
+      ],
+      [
+        "m",
+        "n"
+      ],
+      [
+        "m",
+        "o"
+      ],
+      [
+        "m",
+        "ar"
+      ],
+      [
+        "o",
+        "l"
+      ],
+      [
+        "r",
+        "b"
+      ],
+      [
+        "t",
+        "or"
+      ],
+      [
+        "u",
+        "mn"
+      ],
+      [
+        "v",
+        "mo"
+      ],
+      [
+        "y",
+        "mb"
+      ],
+      [
+        "\\f",
+        "ill"
+      ],
+      [
+        "ha",
+        "cce"
+      ],
+      [
+        "\\le",
+        "ave"
+      ],
+      [
+        "\\left",
+        "/"
+      ],
+      [
+        "\\left",
+        ">"
+      ],
+      [
+        "\\left",
+        "]"
+      ],
+      [
+        "\\left",
+        "\\lceil"
+      ],
+      [
+        "in",
+        "f"
+      ],
+      [
+        "\\right",
+        "/"
+      ],
+      [
+        "\\right",
+        "<"
+      ],
+      [
+        "\\right",
+        "["
+      ],
+      [
+        "\\right",
+        "\\rc"
+      ],
+      [
+        "\\s",
+        "warrow"
+      ],
+      [
+        "\\s",
+        "ymb"
+      ],
+      [
+        "\\n",
+        "warrow"
+      ],
+      [
+        "\\math",
+        "st"
+      ],
+      [
+        "\\math",
+        "or"
+      ],
+      [
+        "\\nu",
+        "llde"
+      ],
+      [
+        "\\v",
+        "ce"
+      ],
+      [
+        "\\o",
+        "f"
+      ],
+      [
+        "\\ve",
+        "rb"
+      ],
+      [
+        "er",
+        "space"
+      ],
+      [
+        "\\vec",
+        "tor"
+      ],
+      [
+        "\\begin",
+        "{tabular}"
+      ],
+      [
+        "\\end",
+        "{tabular}"
+      ],
+      [
+        "\\big",
+        "ve"
+      ],
+      [
+        "\\over",
+        "withdelims"
+      ],
+      [
+        "\\rightarrow",
+        "fi"
+      ],
+      [
+        "\\mathc",
+        "lo"
+      ],
+      [
+        "\\bigg",
+        "m"
+      ],
+      [
+        "\\lim",
+        "inf"
+      ],
+      [
+        "\\triangle",
+        "left"
+      ],
+      [
+        "\\atop",
+        "withdelims"
+      ],
+      [
+        "\\protect",
+        "E"
+      ],
+      [
+        "\\protect",
+        "Z"
+      ],
+      [
+        "\\protect",
+        "e"
+      ],
+      [
+        "\\protect",
+        "m"
+      ],
+      [
+        "\\footnote",
+        "mar"
+      ],
+      [
+        "\\mathop",
+        "en"
+      ],
+      [
+        "\\mat",
+        "hacce"
+      ],
+      [
+        "it",
+        "erspace"
+      ],
+      [
+        "\\prec",
+        "eq"
+      ],
+      [
+        "\\array",
+        "col"
+      ],
+      [
+        "lim",
+        "iterspace"
+      ],
+      [
+        "\\multi",
+        "col"
+      ],
+      [
+        "\\brac",
+        "e"
+      ],
+      [
+        "\\brac",
+        "k"
+      ],
+      [
+        "\\ro",
+        "ot"
+      ],
+      [
+        "vmo",
+        "de"
+      ],
+      [
+        "\\leave",
+        "vmode"
+      ],
+      [
+        "\\right\\rc",
+        "eil"
+      ],
+      [
+        "\\symb",
+        "ol"
+      ],
+      [
+        "\\mathst",
+        "rut"
+      ],
+      [
+        "\\mathor",
+        "d"
+      ],
+      [
+        "\\nullde",
+        "limiterspace"
+      ],
+      [
+        "\\vce",
+        "nter"
+      ],
+      [
+        "\\bigve",
+        "e"
+      ],
+      [
+        "\\rightarrowfi",
+        "ll"
+      ],
+      [
+        "\\mathclo",
+        "se"
+      ],
+      [
+        "\\footnotemar",
+        "k"
+      ],
+      [
+        "\\mathacce",
+        "nt"
+      ],
+      [
+        "\\arraycol",
+        "sep"
+      ],
+      [
+        "\\multicol",
+        "umn"
+      ]
+    ]
+  }
+}
