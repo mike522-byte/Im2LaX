@@ -1,4 +1,4 @@
-# Project Title: Im2LaX - End-to-End LaTeX Formula Recognition via Vision-Language Modeling
+# Im2LaX - End-to-End LaTeX Formula Recognition via Vision-Language Modeling
 
 ## Project Overview
 Im2LaX is an end-to-end formula recognition system that translates rendered mathematical formula images into LaTeX code. This project explores state-of-the-art vision-language (VL) model architectures for structured text generation, targeting precise formula transcription in academic and technical contexts.
